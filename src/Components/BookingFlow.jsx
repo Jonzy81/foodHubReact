@@ -3,6 +3,7 @@ import StepSelectSeats from './StepSelectSeats';
 import StepSelectDate from './StepSelectDate';
 import StepSelectTime from './StepSelectTime';
 import StepUserDetails from './StepUserDetails';
+import StepWizard from './StepWizard';
 
 
 export default function BookingFlow() {
@@ -96,7 +97,8 @@ export default function BookingFlow() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen">
+            <StepWizard currentStep={step} />
             {step === 1 && (
                 <StepSelectSeats
                     partySize={partySize}
